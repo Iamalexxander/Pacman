@@ -115,12 +115,12 @@ void DrawGameUI()
 {
 	ClearText();
 	
-	MakeText("High Score", 9, 0, { 255,255,255 });
-	
+	MakeText("Puntaje mas alto:", 6, 0, { 255,255,255 });
+
 	if (gState.game_state == GAMESTART)
-		MakeText("Ready!", 11, 20, { 255,255,00 });
+		MakeText("Comenzamos XD", 8, 20, { 255,255,00 });
 	else if (gState.game_state == GAMEOVER)
-		MakeText("GAME  OVER", 9, 20, { 255,0,00 });
+		MakeText("Comprate unas manos", 5, 20, { 255,0,00 });
 
 	std::string score  = std::to_string(gState.game_score);
 	if (score.size() == 1)
@@ -214,12 +214,14 @@ void DrawMenuFrame()
 	gState.window->clear(sf::Color::Black);
 	DrawGameUI();
 	if (IsPulse())
-		MakeText("ENTER", 12, 25, { 255,255,255 });
-	
-	MakeText("-BLINKY", 9, 8, { 255,0,0 });
-	MakeText("-PINKY", 9, 11, { 252,181,255 });
-	MakeText("-INKY", 9, 14, { 0,255,255 });
-	MakeText("-CLYDE", 9, 17, { 248,187,85 });
+		MakeText("ENTER PARA SOBREVIVIR ", 4, 25, { 255,255,255 });
+		MakeText("Modificado por:", 7, 28, { 255,255,255 });
+		MakeText("Mena, Guaman, Guerrero", 3, 31, { 255,255,255 });
+
+	MakeText("-Nobita", 9, 8, { 255,0,0 });
+	MakeText("-Doctor", 9, 11, { 252,181,255 });
+	MakeText("-Christian", 9, 14, { 0,255,255 });
+	MakeText("-Cola", 9, 17, { 248,187,85 });
 	MakeText("-PACMAN", 9, 20, { 255,255,0 });
 
 
